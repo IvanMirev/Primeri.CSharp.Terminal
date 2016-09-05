@@ -1,17 +1,24 @@
 ﻿using System;
 
-class ReadFromCommandLine
+
+class Strings
     {
         static void Main()
         {
-            //Дефиниране на променливи
-            int a = 0, b = 0;
+            string test = "1";
+            test = "2";
+            test = "777";
+            test = "4";
+            test = "5";
+            test = "6";
 
-            //Въвеждане на входни параметри
-            Console.Write( "Моля въведете а: " );
-            b = Convert.ToInt32 (Console.ReadLine());
+            Console.WriteLine("Събиране с += " + test + "\n");
 
-            //Печат на резултат
-            Console.WriteLine("Резултатът на a + b е: " + (a + b) .ToString () + "\n\n\n");
+            test = test.Replace(",",";");
+            Console.WriteLine("Работа с Replace" +test+ "\n");
+
+            //Намиране на 3-то число с масив
+            Console.WriteLine("3-ти знак" + test.Split (';') [2]);
         }
     }
+
