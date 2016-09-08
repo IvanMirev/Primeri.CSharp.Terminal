@@ -1,24 +1,24 @@
-﻿using System;
+﻿Масиви
 
+using System;
 
-class Strings
+    class TableProject
     {
         static void Main()
         {
-            string test = "1";
-            test = "2";
-            test = "777";
-            test = "4";
-            test = "5";
-            test = "6";
+            string[] row = new string[3];
 
-            Console.WriteLine("Събиране с += " + test + "\n");
+            row [0] = "Row 1";
+            row [1] = "Row 2";
+            row [2] = "Row 3";
 
-            test = test.Replace(",",";");
-            Console.WriteLine("Работа с Replace" +test+ "\n");
+            Console.WriteLine("Array row: " + row [0] + "," + row [1] + "," + row [2] + "\n");
 
-            //Намиране на 3-то число с масив
-            Console.WriteLine("3-ти знак" + test.Split (';') [2]);
+            string[] parse = "1,2,3,4,5,6,7,8,9".Split(',');
+            Console.WriteLine("Count of array:\n" + "1,2,3,4,5,6,7,8,9\n\nis: " + parse.Length);
+
+            string list1 = string.Join(";", parse);
+            Console.WriteLine("New string is:\n" + list1 + "\n\n");
         }
     }
 
